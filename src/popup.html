@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Speed Controller</title>
+  <link rel="stylesheet" href="styles/popup.css">
+</head>
+<body>
+  <div class="popup">
+    <div class="speed-display">
+      <button class="speed-btn decrease" id="decrease" title="Decrease speed">−</button>
+      <span class="speed-value" id="speed-value">1x</span>
+      <button class="speed-btn increase" id="increase" title="Increase speed">+</button>
+    </div>
+
+    <div class="presets">
+      <button class="preset-btn" data-speed="0.5">0.5x</button>
+      <button class="preset-btn" data-speed="1">1x</button>
+      <button class="preset-btn" data-speed="1.5">1.5x</button>
+      <button class="preset-btn" data-speed="2">2x</button>
+      <button class="preset-btn" data-speed="3">3x</button>
+    </div>
+
+    <button class="toggle-btn" id="toggle">
+      Toggle 1x ↔ Last Speed
+    </button>
+
+    <a href="#" class="options-link" id="options-link">Settings</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Speed Controller - Settings</title>
+  <link rel="stylesheet" href="styles/options.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Video Speed Controller Settings</h1>
+
+    <!-- Hotkeys Section -->
+    <section class="section">
+      <h2>Keyboard Shortcuts</h2>
+      <p class="section-desc">Click on a shortcut to record a new key combination</p>
+
+      <div class="hotkey-list">
+        <div class="hotkey-item">
+          <label>Decrease Speed (-0.1x)</label>
+          <button class="hotkey-input" data-action="decrease" id="hotkey-decrease">
+            <span class="hotkey-value">⌃⇧A</span>
+          </button>
+          <button class="hotkey-clear" data-action="decrease" title="Clear">×</button>
+        </div>
+
+        <div class="hotkey-item">
+          <label>Increase Speed (+0.1x)</label>
+          <button class="hotkey-input" data-action="increase" id="hotkey-increase">
+            <span class="hotkey-value">⌃⇧S</span>
+          </button>
+          <button class="hotkey-clear" data-action="increase" title="Clear">×</button>
+        </div>
+
+        <div class="hotkey-item">
+          <label>Toggle Speed (1x ↔ Last)</label>
+          <button class="hotkey-input" data-action="toggle" id="hotkey-toggle">
+            <span class="hotkey-value">⌃⇧D</span>
+          </button>
+          <button class="hotkey-clear" data-action="toggle" title="Clear">×</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Speed Settings Section -->
+    <section class="section">
+      <h2>Speed Settings</h2>
+
+      <div class="setting-item">
+        <label for="increment">Speed Increment</label>
+        <select id="increment">
+          <option value="0.1">0.1x (Fine)</option>
+          <option value="0.25">0.25x (Medium)</option>
+          <option value="0.5">0.5x (Coarse)</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Overlay Settings Section -->
+    <section class="section">
+      <h2>Overlay Settings</h2>
+
+      <div class="setting-item">
+        <label for="showOverlay">Show Overlay</label>
+        <input type="checkbox" id="showOverlay" checked>
+      </div>
+
+      <div class="setting-item">
+        <label for="overlayPosition">Overlay Position</label>
+        <select id="overlayPosition">
+          <option value="top-left">Top Left</option>
+          <option value="top-right">Top Right</option>
+          <option value="bottom-left">Bottom Left</option>
+          <option value="bottom-right">Bottom Right</option>
+        </select>
+      </div>
+
+      <div class="setting-item">
+        <label for="overlayTimeout">Auto-hide Delay</label>
+        <select id="overlayTimeout">
+          <option value="1000">1 second</option>
+          <option value="2000">2 seconds</option>
+          <option value="3000">3 seconds</option>
+          <option value="5000">5 seconds</option>
+          <option value="0">Never (always visible)</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Status -->
+    <div class="status" id="status"></div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
