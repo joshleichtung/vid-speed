@@ -159,7 +159,8 @@
   // Convert keyboard event to key combo string
   function getKeyCombo(event) {
     const parts = [];
-    if (event.ctrlKey || event.metaKey) parts.push('Ctrl');
+    if (event.ctrlKey) parts.push('Ctrl');
+    if (event.metaKey) parts.push('Meta');
     if (event.altKey) parts.push('Alt');
     if (event.shiftKey) parts.push('Shift');
     parts.push(event.code);
