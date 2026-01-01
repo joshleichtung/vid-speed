@@ -43,17 +43,6 @@ All hotkeys are fully customizable in the extension settings.
 
 5. **Done!** The extension icon will appear in your toolbar
 
-### Screenshots
-
-#### Loading the Extension
-![Loading Extension](screenshots/install.png)
-
-#### Overlay Controls
-![Overlay](screenshots/overlay.png)
-
-#### Settings Page
-![Settings](screenshots/settings.png)
-
 ## Usage
 
 ### Keyboard Shortcuts
