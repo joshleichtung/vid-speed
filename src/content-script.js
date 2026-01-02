@@ -61,6 +61,9 @@
 
   // Find all video elements on the page
   function findVideos() {
+    // Guard against state not being initialized yet
+    if (!state) return;
+
     const newVideos = document.querySelectorAll('video');
     newVideos.forEach(video => {
       if (!videos.includes(video)) {
@@ -89,6 +92,7 @@
 
     // Re-apply speed if video resets it
     video.addEventListener('ratechange', (e) => {
+      if (!state) return;
       if (e.target.playbackRate !== state.currentSpeed && !e.target.__settingSpeed) {
         e.target.__settingSpeed = true;
         e.target.playbackRate = state.currentSpeed;
